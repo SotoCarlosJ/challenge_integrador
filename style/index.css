@@ -93,15 +93,6 @@ img {
     max-width: 120rem;
     margin: 0 auto;
 }
-.btn {
-    border-radius: 5rem;
-    border-style: none;
-    font-family: var(--base-font);
-    font-weight: 500;
-    font-size: var(--font-large);
-    transition: all 0.4s ease;
-    margin-right: auto;
-}
 
 /* HEADER */
 .header {
@@ -187,11 +178,13 @@ img {
 .hero__title {
     font-family: var(--alternative-font);
     font-size: var(--font-jumbo);
+    font-weight: 700;
     color: var(--light-font-solid);
 }
 .hero__text {
     font-family: var(--alternative-font);
-    font-size: --font-medium;
+    font-weight: 400;
+    font-size: var(--font-medium);
     color: var(--light-font-solid);
 }
 .hero__link {
@@ -208,12 +201,16 @@ img {
     color: var(--light-font-solid);
 }
 
+.main-container {
+    padding: var(--spacing-68) var(--spacing-36);
+}
+
 /* COLELCTIONS */
 .collection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: var(--spacing-16) 0;
+    padding-bottom: var(--spacing-16);
 }
 .collection:nth-child(odd) .collection__cover {
     order: -1;
@@ -232,8 +229,8 @@ img {
 .collection__text {
     font-family: var(--alternative-font);
     font-size: var(--font-large);
-    font-weight: 300;
-    border-bottom: 2px solid var(--red-solid);
+    font-weight: 400;
+    border-bottom: 3px solid var(--red-solid);
     padding-bottom: var(--spacing-20);
 }
 .collection__link {
@@ -255,11 +252,11 @@ img {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-36);
-    margin: var(--spacing-68) auto;
 }
 .slider__title {
     font-family: var(--alternative-font);
     font-size: var(--font-display);
+    font-weight: 700;
     text-transform: uppercase;
 }
 .slider__items {
@@ -282,6 +279,7 @@ img {
 }
 .card-item__price {
     font-size: var(--font-small);
+    font-weight: 400;
 }
 .card-item__promo {
     font-size: var(--font-xsmall);
@@ -317,7 +315,7 @@ img {
 
 /* FOOTER */
 .footer {
-    padding: var(--spacing-68);
+    padding: var(--spacing-68) var(--spacing-36);
 }
 .footer__copy {
     text-align: center;
