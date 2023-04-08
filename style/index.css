@@ -212,6 +212,12 @@ img {
     align-items: center;
     padding-bottom: var(--spacing-16);
 }
+.collection__cover {
+    transition: all 0.7s ease-in-out;
+}
+.collection__cover:hover {
+    transform: scale(110%);
+}
 .collection:nth-child(odd) .collection__cover {
     order: -1;
 }
