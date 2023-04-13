@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Funkoshop</title>
+    <title>Register | Funkoshop</title>
 </head>
 <body>
     <header> <!-- inicio del header -->
@@ -24,9 +24,21 @@
     </header> <!-- fin del header -->
 
     <main>
-        <h1>INGRESAR A MI CUENTA</h1>
+        <h1>CREA TU CUENTA</h1>
+
+        <p>Completa el formulario para ser parte del mundo de los Funkos</p>
 
         <form action="">
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" placeholder="John" required>
+            </div>
+
+            <div>
+                <label for="last-name">Apellido:</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Doe" required>
+            </div>
+
             <div>
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" placeholder="johndoe@correo.com" required>
@@ -38,13 +50,16 @@
             </div>
 
             <div>
-                <input type="submit" value="Ingresar">
-
-                <input type="checkbox" id="recordarme" name="recordarme" value="recordarme">
-                <label for="recordarme">Recordarme</label>
+                <label for="re-password">Repita Contraseña::</label>
+                <input type="password" name="re-password" id="re-password" placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;" required>  
             </div>
 
-            <a href="#">Olvidé mi contraseña</a>
+            <div>
+                <input type="submit" value="Registrar">
+
+                <input type="checkbox" id="accept" name="accept" value="accept">
+                <label for="accept">Acepto <a href="#">Términos y Condiciones</a></label>
+            </div>
         </form>
     </main>
 
