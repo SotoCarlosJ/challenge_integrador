@@ -51,7 +51,7 @@
         </nav>
     </header> <!-- fin del header -->
 
-    <main> <!-- inicio del main -->
+    <main class="main-container"> <!-- inicio del main -->
         <section> <!-- producto seleccionado -->
             <picture> <!-- imagen del producto -->
                 <img src="../img/multimedia/star-wars/baby-yoda-1.webp" alt="Figura funko de baby yoda">
@@ -78,65 +78,75 @@
             </article> <!-- descripcion del producto -->
         </section> <!-- producto seleccionado -->
 
-        <section> <!-- productos relacionados -->
-            <h2>PRODUCTOS RELACIONADOS</h2>
+        
+        <section class="slider container"> <!-- productos relacionados -->
+            <h2 class="slider__title">PRODUCTOS RELACIONADOS</h2>
 
-            <ul> <!-- listado de productos relacionados -->
-                <li> <!-- producto #1 -->
-                    <article>
-                        <a href="./item.html">
-                            <picture> <!-- imagen del producto -->
-                                <img src="../img/multimedia/star-wars/trooper-1.webp" alt="Figura funko de stormtrooper">
+            <ul class="slider__items"> <!-- listado de productos relacionados -->
+                <li class="slider__item"> <!-- producto #1 -->
+                    <article class="card-item">
+                        <a class="card-item__link" href="./item.html">
+                            <picture class="card-item__cover"> <!-- imagen del producto -->
+                                <span class="card-item__tag">NUEVO</span>
+                                <img class="card-item__img--front" src="../img/multimedia/star-wars/trooper-1.webp" alt="Figura funko de stormtrooper">
+
+                                <img class="card-item__img--back" src="../img/multimedia/star-wars/trooper-box.webp" alt="Figura funko de stormtrooper en caja">
                             </picture> <!-- imagen del producto -->
             
-                            <div> <!-- descripcion del producto -->
-                                <p>STAR WARS</p>
+                            <div class="card-item__content"> <!-- descripcion del producto -->
+                                <p class="card-item__licence">STAR WARS</p>
             
-                                <h4>STORMTROOPER LIGHTSABER</h4>
+                                <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
             
-                                <p>$ 1799,99.-</p>
+                                <p class="card-item__price">$ 1799,99.-</p>
             
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div> <!-- descripcion del producto -->
                         </a>
                     </article> 
                 </li> <!-- producto #1 -->
 
-                <li> <!-- producto #2 -->
-                    <article> 
-                        <a href="./item.html"> 
-                            <picture> <!-- imagen del producto -->
-                                <img src="../img/multimedia/pokemon/pidgeotto-1.webp" alt="Figura funko de pidgeotto">
+                <li class="slider__item"> <!-- producto #2 -->
+                    <article class="card-item"> 
+                        <a class="card-item__link" href="./item.html"> 
+                            <picture class="card-item__cover"> <!-- imagen del producto -->
+                                <span class="card-item__tag">NUEVO</span>
+                                <img class="card-item__img--front" src="../img/multimedia/pokemon/pidgeotto-1.webp" alt="Figura funko de pidgeotto">
+
+                                <img class="card-item__img--back" src="../img/multimedia/pokemon/pidgeotto-box.webp" alt="Figura funko de pidgeotto en caja">
                             </picture> <!-- imagen del producto -->
             
-                            <div> <!-- descripcion del producto -->
-                                <p>POKEMON</p>
+                            <div class="card-item__content"> <!-- descripcion del producto -->
+                                <p class="card-item__licence">POKEMON</p>
             
-                                <h4>PIDGEOTTO</h4>
+                                <h4 class="card-item__name">PIDGEOTTO</h4>
             
-                                <p>$ 1799,99.-</p>
+                                <p class="card-item__price">$ 1799,99.-</p>
             
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div> <!-- descripcion del producto -->
                         </a>
                     </article>
                 </li> <!-- producto #2 -->
 
-                <li> <!-- producto #3 -->
-                    <article> 
-                        <a href="./item.html"> 
-                            <picture> <!-- imagen del producto -->
-                                <img src="../img/multimedia/harry-potter/luna-1.webp" alt="funko luna lovegood lion mask">
+                <li class="slider__item"> <!-- producto #3 -->
+                    <article class="card-item"> 
+                        <a class="card-item__link" href="./item.html"> 
+                            <picture class="card-item__cover"> <!-- imagen del producto -->
+                                <span class="card-item__tag">NUEVO</span>
+                                <img class="card-item__img--front" src="../img/multimedia/harry-potter/luna-1.webp" alt="funko luna lovegood lion mask">
+
+                                <img class="card-item__img--back" src="../img/multimedia/harry-potter/luna-box.webp" alt="funko luna lovegood lion mask en caja">
                             </picture> <!-- imagen del producto --> 
             
-                            <div> <!-- descripcion del producto -->
-                                <p>HARRY POTTER</p>
+                            <div class="card-item__content"> <!-- descripcion del producto -->
+                                <p class="card-item__licence">HARRY POTTER</p>
             
-                                <h4>LUNA LOVEGOOD LION MASK</h4>
+                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
             
-                                <p>$ 1799,99.-</p>
+                                <p class="card-item__price">$ 1799,99.-</p>
             
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div> <!-- descripcion del producto -->
                         </a>
                     </article> 
