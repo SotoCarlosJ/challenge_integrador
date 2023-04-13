@@ -55,14 +55,14 @@
         <div class="container main-container--shop">
             <aside class="filter"> <!-- formulario para buscar y/o filtrar producto -->
                 <div class="filter__search"> <!-- Input Buscar -->
-                    <label for="buscar">BUSCAR</label>
-                    <input type="text" name="buscar" id="buscar" placeholder="item o categoria">
+                    <label class="filter__tittle" for="buscar">BUSCAR</label>
+                    <input class="filter__input" type="text" name="buscar" id="buscar" placeholder="item o categoria">
                 </div> <!-- Input Buscar -->
         
                 <div class="filter__sort-by"> <!-- Input Ordenar -->
-                    <label for="ordenar">ORDENAR POR</label>
-                    <select name="ordenar" id="ordenar">
-                        <option value="" disabled selected>Mayor a menor</option>
+                    <label class="filter__tittle" for="ordenar">ORDENAR POR</label>
+                    <select class="filter__input" name="ordenar" id="ordenar">
+                        <option value="" disabled selected hidden>Mayor a menor</option>
                         <option value="mayor">Mayor a menor</option>
                         <option value="menor">Menor a mayor</option>
                         <option value="relevantes">Más relevantes</option>
@@ -70,43 +70,43 @@
                 </div> <!-- Input Ordenar -->
         
                 <div class="filter__price"> <!-- Input Precio -->
-                    <p>PRECIO</p>
+                    <p class="filter__tittle">PRECIO</p>
         
-                    <div>
-                        <label for="minimo">MIN</label>
-                        <input type="number" name="minimo" id="precio-min" placeholder="0">
+                    <div class="range">
+                        <label class="range__tittle" for="minimo">MIN</label>
+                        <input class="range__input" type="number" name="minimo" id="precio-min" placeholder="0">
         
                         <p>-</p>
         
-                        <label for="maximo">MAX</label>
-                        <input type="number" name="maximo" id="precio-max" placeholder="0">
+                        <label class="range__tittle" for="maximo">MAX</label>
+                        <input class="range__input" type="number" name="maximo" id="precio-max" placeholder="0">
                     </div>
                 </div> <!-- Input Precio -->
         
                 <div class="filter__condition"> <!-- Input Filtrar -->
-                    <p>FILTRAR</p>
+                    <p class="filter__tittle">FILTRAR</p>
                     
-                    <label for="filtro-1"> <!-- Checkbox personalizado "NUEVO" -->
-                        <input type="checkbox" id="filtro-1" name="filtro-1" value="nuevos">
-                        <span></span>
+                    <label class="checkbox" for="filtro-1"> <!-- Checkbox personalizado "NUEVO" -->
+                        <input class="checkbox__input" type="checkbox" id="filtro-1" name="filtro-1" value="nuevos">
+                        <span class="checkbox__span"></span>
                         <p>NUEVO</p>
                     </label>
         
-                    <label for="filtro-2"> <!-- Checkbox personalizado "OFERTAS" -->
-                        <input type="checkbox" id="filtro-2" name="filtro-2" value="ofertas">
-                        <span></span>
+                    <label class="checkbox" for="filtro-2"> <!-- Checkbox personalizado "OFERTAS" -->
+                        <input class="checkbox__input" type="checkbox" id="filtro-2" name="filtro-2" value="ofertas">
+                        <span class="checkbox__span"></span>
                         <p>OFERTAS</p>
                     </label>
                     
-                    <label for="filtro-3"> <!-- Checkbox personalizado "EDICION ESPECIAL" -->
-                        <input type="checkbox" id="filtro-3" name="filtro-3" value="edicion-especial">
-                        <span></span>
+                    <label class="checkbox" for="filtro-3"> <!-- Checkbox personalizado "EDICION ESPECIAL" -->
+                        <input class="checkbox__input" type="checkbox" id="filtro-3" name="filtro-3" value="edicion-especial">
+                        <span class="checkbox__span"></span>
                         <p>EDICIÓN ESPECIAL</p>
                     </label>
         
-                    <label for="filtro-4"> <!-- Checkbox personalizado "FAVORITOS" -->
-                        <input type="checkbox" id="filtro-4" name="filtro-4" value="favoritos">
-                        <span></span>
+                    <label class="checkbox" for="filtro-4"> <!-- Checkbox personalizado "FAVORITOS" -->
+                        <input class="checkbox__input" type="checkbox" id="filtro-4" name="filtro-4" value="favoritos">
+                        <span class="checkbox__span"></span>
                         <p>FAVORITOS</p>
                     </label>
                 </div> <!-- Input Filtrar -->
