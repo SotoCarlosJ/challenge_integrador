@@ -52,33 +52,32 @@
     </header> <!-- fin del header -->
 
     <main class="main-container"> <!-- inicio del main -->
-        <section> <!-- producto seleccionado -->
-            <picture> <!-- imagen del producto -->
+        <section class="item"> <!-- producto seleccionado -->
+            <picture class="item__cover"> <!-- imagen del producto -->
                 <img src="../img/multimedia/star-wars/baby-yoda-1.webp" alt="Figura funko de baby yoda">
             </picture> <!-- imagen del producto -->
 
-            <article> <!-- descripcion del producto -->
-                <p>STAR WARS</p>
+            <article class="item__content"> <!-- descripcion del producto -->
+                <p class="item__collection">STAR WARS</p>
 
-                <h3>BABY YODA BLUEBALL</h3>
+                <h3 class="item__tittle">BABY YODA BLUEBALL</h3>
 
-                <p>Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
+                <p class="item__text">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
 
-                <p>$ 1799,99.-</p>
+                <p class="item__price">$ 1799,99.-</p>
 
-                <form action=""> <!-- formulario para agregar cantidad de productos al carrito -->
-                    <button>-</button>
-                    <input type="number" placeholder="0">
-                    <button>+</button>
+                <form class="add-to-cart" action=""> <!-- formulario para agregar cantidad de productos al carrito -->
+                    <button class="add-to-cart__btn">-</button>
+                    <input class="add-to-cart__input" type="number" placeholder="0">
+                    <button class="add-to-cart__btn">+</button>
 
-                    <input type="submit" value="Agregar al Carrito">
+                    <input class="add-to-cart__submit" type="submit" value="Agregar al Carrito">
                 </form> <!-- formulario para agregar cantidad de productos al carrito -->
 
-                <p><a href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
+                <p class="item__promo"><a class="item__link" href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
             </article> <!-- descripcion del producto -->
         </section> <!-- producto seleccionado -->
 
-        
         <section class="slider container"> <!-- productos relacionados -->
             <h2 class="slider__title">PRODUCTOS RELACIONADOS</h2>
 
