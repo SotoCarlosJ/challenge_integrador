@@ -542,61 +542,61 @@ img {
 }
 
 /* LOGIN - MAIN */
-.login {
+.user {
     padding: var(--spacing-128) var(--spacing-36);
     display: grid;
     gap: var(--spacing-28);
 }
-.login__container {
-    max-width: 51.5rem;
+.user__container {
+    max-width: 60rem;
     margin: 0 auto;
 }
-.login__tittle {
+.user__tittle {
     text-align: center;
     font-family: var(--alternative-font);
     font-weight: 700;
     font-size: var(--font-display);
 }
-.login__form {
+.user__form {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-36);
     padding: 0 var(--spacing-68);
 }
-.login__box {
+.user__box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.login__label {
+.user__label {
     font-weight: 400;
     font-size: var(--font-large);
 }
-.login__input {
+.user__input {
     border: none;
     border-bottom: 2px solid var(--red-solid);
     outline: none;
     padding: var(--spacing-8);
 }
-.login__input:-webkit-autofill,
-.login__input:-webkit-autofill:hover, 
-.login__input:-webkit-autofill:focus, 
-.login__input:-webkit-autofill:active{
+.user__input:-webkit-autofill,
+.user__input:-webkit-autofill:hover, 
+.user__input:-webkit-autofill:focus, 
+.user__input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-.login__input::placeholder {
+.user__input::placeholder {
     font-weight: 400;
     font-size: var(--font-xsmall);
     color: var(--dark-bg-300);
 }
-.login__input--password::placeholder {
+.user__input--password::placeholder {
     font-size: var(--font-medium);
 }
-.login__submit {
+.user__submit {
     display: flex;
     justify-content: center;
     gap: var(--spacing-36);
 }
-.login__btn {
+.user__btn {
     cursor: pointer;
     font-weight: 400;
     font-size: var(--font-xsmall);
@@ -606,16 +606,27 @@ img {
     border-style: none;
     transition: all 0.2s ease-in-out;
 }
-.login__btn:hover {
+.user__btn:hover {
     filter: brightness(0.8);
 }
-.login__remember {
+.user__remember {
     font-weight: 400;
     font-size: var(--font-medium);
 }
-.login__link {
+.user__link {
     color: var(--blue-solid);
     font-weight: 400;
     font-size: var(--font-small);
     text-align: center;
+}
+
+/* REGISTER - MAIN */
+.user__text {
+    text-align: center;
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    font-size: var(--font-xlarge);
+}
+.user__terms {
+    color: var(--blue-solid);
 }
