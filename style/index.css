@@ -540,3 +540,82 @@ img {
 .add-to-cart__submit:hover {
     filter: brightness(0.8)
 }
+
+/* LOGIN - MAIN */
+.login {
+    padding: var(--spacing-128) var(--spacing-36);
+    display: grid;
+    gap: var(--spacing-28);
+}
+.login__container {
+    max-width: 51.5rem;
+    margin: 0 auto;
+}
+.login__tittle {
+    text-align: center;
+    font-family: var(--alternative-font);
+    font-weight: 700;
+    font-size: var(--font-display);
+}
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+    padding: 0 var(--spacing-68);
+}
+.login__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.login__label {
+    font-weight: 400;
+    font-size: var(--font-large);
+}
+.login__input {
+    border: none;
+    border-bottom: 2px solid var(--red-solid);
+    outline: none;
+    padding: var(--spacing-8);
+}
+.login__input:-webkit-autofill,
+.login__input:-webkit-autofill:hover, 
+.login__input:-webkit-autofill:focus, 
+.login__input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.login__input::placeholder {
+    font-weight: 400;
+    font-size: var(--font-xsmall);
+    color: var(--dark-bg-300);
+}
+.login__input--password::placeholder {
+    font-size: var(--font-medium);
+}
+.login__submit {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-36);
+}
+.login__btn {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: var(--font-xsmall);
+    padding: var(--spacing-12) var(--spacing-28);
+    color: var(--light-font-solid);
+    background-color: var(--red-solid);
+    border-style: none;
+    transition: all 0.2s ease-in-out;
+}
+.login__btn:hover {
+    filter: brightness(0.8);
+}
+.login__remember {
+    font-weight: 400;
+    font-size: var(--font-medium);
+}
+.login__link {
+    color: var(--blue-solid);
+    font-weight: 400;
+    font-size: var(--font-small);
+    text-align: center;
+}
