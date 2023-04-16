@@ -5,32 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Funkoshop</title>
+    <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
-    <header> <!-- inicio del header -->
-        <nav>
-            <picture> <!-- logo de la tienda con enlace a home -->
+    <header class="header"> <!-- inicio del header -->
+        <nav class="navbar container">
+            <picture class="navbar__logo"> <!-- logo de la tienda con enlace a home -->
                 <a href="../index.html">
                     <img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>
             </picture> <!-- logo de la tienda con enlace a home -->
 
-            <ul> <!-- barra de navegacion -->
-                <li>
-                    <a href="./shop.html">SHOP</a>
-                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+            <ul class="navbar__menu"> <!-- barra de navegacion -->
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link width" href="./shop.html">SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Funkos</a>
+                        </li>
+
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Remeras</a>
+                        </li>
+
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">LLaveros</a>
+                        </li>
+                    </ul>
                 </li>
 
-                <li>
-                    <a href="./contacto.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./contacto.html">CONTACTO</a>
                 </li>
 
-                <li>
-                    <a href="./login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./login.html">LOGIN</a>
                 </li>
 
-                <li>
-                    <a href="./cart.html">
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./cart.html">
                         <img src="../img/multimedia/icons/cart-icon.svg" alt="Icono shopping cart">
                     </a>    
                 </li>
