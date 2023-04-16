@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Funkoshop</title>
+</head>
+<body>
+    <header> <!-- inicio del header -->
+        <nav>
+            <picture> <!-- logo de la tienda con enlace a home -->
+                <a href="../index.html">
+                    <img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
+                </a>
+            </picture> <!-- logo de la tienda con enlace a home -->
+
+            <ul> <!-- barra de navegacion -->
+                <li>
+                    <a href="./shop.html">SHOP</a>
+                    <iconify-icon icon="mdi:chevron-down"></iconify-icon>
+                </li>
+
+                <li>
+                    <a href="./contacto.html">CONTACTO</a>
+                </li>
+
+                <li>
+                    <a href="./login.html">LOGIN</a>
+                </li>
+
+                <li>
+                    <a href="./cart.html">
+                        <img src="../img/multimedia/icons/cart-icon.svg" alt="Icono shopping cart">
+                    </a>    
+                </li>
+            </ul> <!-- barra de navegacion -->
+        </nav>
+    </header> <!-- fin del header -->
+
+    <main> <!-- inicio del main -->
+        <h1>Contactanos</h1>
+
+        <form action="">
+            <p>"*" Campos obligatorios</p>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div>
+                <label for="last-name">Apellido:</label>
+                <input type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <div>
+                <label for="phone">Telefono:</label>
+                <input type="tel" name="phone" id="phone" required>
+            </div>
+
+            <div>
+                <label for="question">Tipo de Consulta:</label>
+                <select name="question" id="question" required>
+                    <option value="" selected hidden disabled>Seleccione su tipo de consulta</option>
+                    <option value="buy">Comprar</option>
+                    <option value="payments">Medios de pagos</option>
+                    <option value="shipping">Envios</option>
+                    <option value="returns">Devoluciones</option>
+                    <option value="others">Otros</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">Escribenos tu consulta:</label>
+                <input type="text" name="message" id="message">
+            </div>
+
+            <input type="submit" name="send" id="send" value="Enviar">
+
+        </form>
+    </main> <!-- fin del main -->
+
+    <footer> <!-- inicio del footer -->
+        <section> <!-- barra de navagacion -->
+            <nav> 
+                <ul>
+                    <li>
+                        <a href="./shop.html">SHOP</a>
+                    </li>
+    
+                    <li>
+                        <a href="./register.html">REGISTRARSE</a>
+                    </li>
+    
+                    <li>
+                        <a href="./login.html">LOGIN</a>
+                    </li>
+    
+                    <li>
+                        <a href="./contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+
+                <picture> <!-- logo de la tienda -->
+                    <a href="../index.html">
+                        <img src="../img/multimedia/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
+                    </a>
+                </picture> <!-- logo de la tienda -->
+            </nav> 
+        </section> <!-- barra de navagacion -->
+
+        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer> <!-- fin del footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+</body>
+</html>
