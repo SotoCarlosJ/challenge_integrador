@@ -431,10 +431,15 @@ img {
     transition: all 0.4s ease-in-out;
     background-color: var(--blue-solid);
     border-radius: 50%;
-
 }
 .checkbox__input:checked ~ .checkbox__span::after{
     transform: scale(140%);
+}
+.checkbox__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--font-medium);
 }
 
 /* SHOP - PAGINATION */
@@ -542,61 +547,62 @@ img {
 }
 
 /* LOGIN - MAIN */
-.login {
-    padding: var(--spacing-128) var(--spacing-36);
-    display: grid;
-    gap: var(--spacing-28);
+.admin-container {
+    padding: var(--spacing-36);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
 }
-.login__container {
-    max-width: 51.5rem;
-    margin: 0 auto;
-}
-.login__tittle {
-    text-align: center;
+.admin__tittle {
     font-family: var(--alternative-font);
     font-weight: 700;
     font-size: var(--font-display);
 }
-.login__form {
+.admin__tittle--user {
+    text-align: center;
+}
+.login-container {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.admin__form {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-36);
-    padding: 0 var(--spacing-68);
 }
-.login__box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.admin__box {
+    display: flex;
+    justify-content:space-between;
+    gap: var(--spacing-12);
 }
-.login__label {
+.admin__label {
     font-weight: 400;
     font-size: var(--font-large);
 }
-.login__input {
+.admin__input {
     border: none;
     border-bottom: 2px solid var(--red-solid);
     outline: none;
     padding: var(--spacing-8);
 }
-.login__input:-webkit-autofill,
-.login__input:-webkit-autofill:hover, 
-.login__input:-webkit-autofill:focus, 
-.login__input:-webkit-autofill:active{
+.admin__input:-webkit-autofill,
+.admin__input:-webkit-autofill:hover, 
+.admin__input:-webkit-autofill:focus, 
+.admin__input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-.login__input::placeholder {
+.admin__input::placeholder {
     font-weight: 400;
     font-size: var(--font-xsmall);
     color: var(--dark-bg-300);
 }
-.login__input--password::placeholder {
+.admin__input--password::placeholder {
     font-size: var(--font-medium);
 }
-.login__submit {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-36);
+.admin__box--submit {
+    justify-content:space-evenly;
 }
-.login__btn {
+.admin__btn {
     cursor: pointer;
     font-weight: 400;
     font-size: var(--font-xsmall);
@@ -606,14 +612,13 @@ img {
     border-style: none;
     transition: all 0.2s ease-in-out;
 }
-.login__btn:hover {
+.admin__btn:hover {
     filter: brightness(0.8);
 }
-.login__remember {
-    font-weight: 400;
-    font-size: var(--font-medium);
+.checkbox--admin {
+    padding: 0;
 }
-.login__link {
+.admin__link {
     color: var(--blue-solid);
     font-weight: 400;
     font-size: var(--font-small);
