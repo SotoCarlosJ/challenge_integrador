@@ -583,6 +583,7 @@ img {
     border-bottom: 2px solid var(--red-solid);
     outline: none;
     padding: var(--spacing-8);
+    font-size: var(--font-small);
 }
 .admin__input:-webkit-autofill,
 .admin__input:-webkit-autofill:hover, 
@@ -636,23 +637,35 @@ img {
 }
 
 /* CONTACTTO - MAIN */
-.user__required {
+.required {
     font-size: var(--font-small);
     color: var(--red-solid);
+    text-align: center;
 }
-.filter__input--contact {
+.admin__input--contact {
+    width: 60%;
+}
+.admin__select {
+    border: 2px solid var(--dark-bg-solid);
+    border-radius: 6px;
+    padding: var(--spacing-12);  
     font-size: var(--font-medium);
+    font-weight: 500;
 }
-.filter__input--message {
-    font-size: var(--font-small);
-    resize: vertical;
-}
-.user__box--text-area {
+.admin__box--text-area {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-12);
 }
-.user__btn--contact {
-    margin-right: auto;
-    padding: var(--spacing-16) var(--spacing-68);
+.text-area {
+    font-family: var(--base-font);
+    font-size: var(--font-medium);
+    resize: vertical;
+    border: 1px solid var(--black-solid);
+    border-radius: 4px;
+    padding: var(--spacing-12);
+}
+.admin__box--start {
+    justify-content: flex-start;
+    gap: var(--spacing-68);
 }

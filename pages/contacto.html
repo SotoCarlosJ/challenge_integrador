@@ -51,35 +51,35 @@
         </nav>
     </header> <!-- fin del header -->
 
-    <main class="user user--contact"> <!-- inicio del main -->
-        <h1 class="user__tittle">Contactanos</h1>
+    <main class="admin-container"> <!-- inicio del main -->
+        <h1 class="admin__tittle admin__tittle--user">Contactanos</h1>
 
-        <form class="container user__form" action="">
-            <p class="user__required">"*" Campos obligatorios</p>
+        <form class="container admin__form" action="">
+            <p class="required">"*" Campos obligatorios</p>
 
-            <div class="user__box">
-                <label class="user__label" for="email">Email:</label>
-                <input class="user__input" type="email" name="email" id="email" required>
+            <div class="admin__box">
+                <label class="admin__label" for="email">Email:</label>
+                <input class="admin__input admin__input--contact" type="email" name="email" id="email" required>
             </div>
 
-            <div class="user__box">
-                <label class="user__label" for="name">Nombre:</label>
-                <input class="user__input" type="text" name="name" id="name" required>
+            <div class="admin__box">
+                <label class="admin__label" for="name">Nombre:</label>
+                <input class="admin__input admin__input--contact" type="text" name="name" id="name" required>
             </div>
 
-            <div class="user__box">
-                <label class="user__label" for="last-name">Apellido:</label>
-                <input class="user__input" type="text" name="last-name" id="last-name" required>
+            <div class="admin__box">
+                <label class="admin__label" for="last-name">Apellido:</label>
+                <input class="admin__input admin__input--contact" type="text" name="last-name" id="last-name" required>
             </div>
 
-            <div class="user__box">
-                <label class="user__label" for="phone">Telefono:</label>
-                <input class="user__input" type="tel" name="phone" id="phone" required>
+            <div class="admin__box">
+                <label class="admin__label" for="phone">Telefono:</label>
+                <input class="admin__input admin__input--contact" type="tel" name="phone" id="phone" required>
             </div>
 
-            <div class="user__box">
-                <label class="user__label" for="question">Tipo de Consulta:</label>
-                <select class="filter__input filter__input--contact" name="question" id="question" required>
+            <div class="admin__box">
+                <label class="admin__label" for="question">Tipo de Consulta:</label>
+                <select class="admin__select" name="question" id="question" required>
                     <option value="" selected hidden disabled>Seleccione su tipo de consulta</option>
                     <option value="buy">Comprar</option>
                     <option value="payments">Medios de pagos</option>
@@ -89,12 +89,15 @@
                 </select>
             </div>
 
-            <div class="user__box user__box--text-area">
-                <label class="user__label" for="message">Escribenos tu consulta:</label>
-                <textarea class="filter__input filter__input--message" name="message" id="message" cols="30" rows="10"></textarea>
+            <div class="admin__box--text-area">
+                <label class="admin__label" for="message">Escribenos tu consulta:</label>
+                <textarea class="text-area" name="message" id="message" cols="30" rows="10" placeholder="Escribenos tu consulta aca"></textarea>
             </div>
 
-            <input class="user__btn user__btn--contact" type="submit" name="send" id="send" value="Enviar">
+            <div class="admin__box admin__box--start">
+                <input class="admin__btn" type="submit" name="send" id="send" value="Enviar">
+                <input class="admin__btn" type="reset" name="clear" id="clear" value="Limpiar">
+            </div>
 
 
         </form>
