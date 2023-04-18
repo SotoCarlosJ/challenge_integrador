@@ -550,7 +550,6 @@ img {
     flex-direction: column;
     margin-bottom: auto;
     gap: var(--spacing-36);
-    min-height: 65rem;
 }
 .admin__tittle {
     font-family: var(--alternative-font);
