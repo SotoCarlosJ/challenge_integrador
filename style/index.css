@@ -625,13 +625,13 @@ img {
 }
 
 /* REGISTER - MAIN */
-.user__text {
+.admin__text {
     text-align: center;
     font-family: var(--alternative-font);
     font-weight: 500;
     font-size: var(--font-xlarge);
 }
-.user__terms {
+.admin__terms {
     color: var(--blue-solid);
 }
 
