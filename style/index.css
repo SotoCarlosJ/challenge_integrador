@@ -436,10 +436,7 @@ img {
     transform: scale(140%);
 }
 .checkbox__text {
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 500;
-    font-size: var(--font-medium);
 }
 
 /* SHOP - PAGINATION */
