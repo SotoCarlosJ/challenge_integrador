@@ -387,16 +387,18 @@ img {
     width: 100%;
     border: 2px solid var(--dark-bg-solid);
     border-radius: 6px;
-    text-align: center;
     font-size: var(--font-medium);
     font-weight: 500;
-    appearance: textfield;
 }
-.range__input::placeholder {
+.input-number {
+    appearance: textfield;
+    text-align: center;
+}
+.input-number::placeholder {
     color: var(--dark-bg-500);
 }
-.range__input::-webkit-inner-spin-button,
-.range__input::-webkit-outer-spin-button{
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button{
     appearance: none;
 }
 .filter__condition {
@@ -544,8 +546,10 @@ img {
 }
 
 /* LOGIN - MAIN */
-.admin-container {
+.admin {
     padding: var(--spacing-36);
+}
+.admin-container {
     display: flex;
     flex-direction: column;
     margin-bottom: auto;
@@ -571,7 +575,8 @@ img {
 .admin__box {
     display: flex;
     justify-content:space-between;
-    gap: var(--spacing-12);
+    align-items: center;
+    gap: var(--spacing-20);
 }
 .admin__label {
     font-weight: 400;
@@ -667,4 +672,30 @@ img {
 .admin__box--start {
     justify-content: flex-start;
     gap: var(--spacing-68);
+}
+
+/* CREATE - MAIN */
+.container--create {
+    max-width: 80rem;
+    margin-right: auto;
+}
+.admin__tittle--margin {
+    margin-bottom: var(--spacing-36);
+}
+.filter__input--admin {
+    width: auto;
+    padding-right: var(--spacing-128);
+}
+.admin__input--width-30 {
+    width: 30rem;
+}
+.admin__input--width-5 {
+    width: 5rem;
+}
+.text-area--create {
+    resize: both;
+    width: 100%;
+}
+.admin__box--gap {
+    gap: var(--spacing-8);
 }
