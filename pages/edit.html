@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create | Funkoshop</title>
+    <title>Edit | Funkoshop</title>
     <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
@@ -25,71 +25,78 @@
     </header> <!-- fin del header -->
 
     <main class="admin">
-        <h1 class="container admin__tittle admin__tittle--margin">CREAR NUEVO ITEM</h1>
+        <h1 class="container admin__tittle admin__tittle--margin">EDITAR ITEM</h1>
 
         <form class="container admin-container" action="">
             <div class="container--create admin__box">
                 <label class="admin__label" for="category">Categoría:</label>
                 <select class="filter__input filter__input--admin" name="category" id="category" required>
-                    <option value="" selected hidden disabled>Seleccionar</option>
-                    <option value="figures">Figuras</option>
+                    <option value="figures" selected>Figuras</option>
                     <option value="t-shirts">Remeras</option>
                     <option value="keychain">Llaveros</option>
                 </select>
 
                 <label class="admin__label" for="last-name">Licencia:</label>
                 <select class="filter__input filter__input--admin" name="category" id="category" required>
-                    <option value="" selected hidden disabled>Seleccionar</option>
                     <option value="star-wars">Star Wars</option>
                     <option value="pokemon">Pokemon</option>
                     <option value="harry-potter">Harry Potter</option>
+                    <option value="naruto-shippuden" selected>Naruto Shippuden</option>
                 </select>
             </div>
 
             <div class="container--create admin__box">
                 <label class="admin__label" for="item-name">Nombre del producto:</label>
-                <input class="admin__input admin__input--width-30" type="text" name="item-name" id="item-name" placeholder="Kakashi Hatake Shippuden Saga" required>
+                <input class="admin__input admin__input--width-30" type="text" name="item-name" id="item-name" placeholder="Kakashi Hatake Shippuden Saga" value="Kakashi Hatake Shippuden Saga" required>
             </div>
 
-            <textarea class="container--create text-area text-area--create" name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+            <textarea class="container--create admin__box text-area text-area--create" name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori.</textarea>
 
             <div class="container--create admin__box">
                 <label class="admin__label" for="sku">SKU:</label>
-                <input class="admin__input admin__input--width-15" type="text" name="sku" id="sku" placeholder="SSK111AB001" required> 
+                <input class="admin__input admin__input--width-15" type="text" name="sku" id="sku" placeholder="SSK111AB001" value="NAR001012" required> 
                 
                 <label class="admin__label" for="price">Precio:</label>
-                <input class="admin__input admin__input--width-15" type="text" name="price" id="price" placeholder="$ 0.000,00" required>  
+                <input class="admin__input admin__input--width-15" type="text" name="price" id="price" placeholder="$ 0.000,00" value="$ 1.799,00" required>  
             
                 <label class="admin__label" for="stock">Stock:</label>
-                <input class="admin__input admin__input--width-5 input-number" type="number" name="stock" id="stock" placeholder="0" required> 
+                <input class="admin__input admin__input--width-5 input-number" type="number" name="stock" id="stock" placeholder="0" value="10" required> 
             </div>
 
             <div class="container--create admin__box">
                 <label class="admin__label" for="discount">Descuento:</label>
-                <input class="admin__input admin__input--width-5 input-number" type="number" name="discount" id="discount" placeholder="0%" required> 
+                <input class="admin__input admin__input--width-5 input-number" type="text" name="discount" id="discount" placeholder="0%" value="10%" required> 
                 
                 <label class="admin__label" for="promo">Cuotas:</label>
                 <select class="filter__input filter__input--admin" name="promo" id="promo" required>
-                    <option value="" selected hidden disabled>Selecciones cuotas</option>
                     <option value="promo-1">1 Cuota</option>
                     <option value="promo-3">3 Cuotas sin interés</option>
-                    <option value="promo-6">6 Cuotas sin interés</option>
+                    <option value="promo-6" selected>6 Cuotas sin interés</option>
                     <option value="promo-9">9 Cuotas sin interés</option>
                     <option value="promo-12">12 Cuotas sin interés</option>
                 </select>
             </div>
 
-            <div class="container--create admin__box admin__box--gap">
+            <div class="container--create admin__box">
                 <label class="admin__label" for="image">Imágenes:</label>
                 <input type="file" name="image" id="image">
             </div>
 
             <div class="container--create admin__box">
-                <input class="admin__btn" type="submit" value="Agregar Producto">
-                <input class="admin__btn" type="reset" value="Limpiar">
+                <div class="item-cover">
+                    <img class="item-cover__img" src="../img/multimedia/naruto-shippuden/kakashi_hatake_front.png" alt="Figura Funko coleccionable de Kakashi Hatake">
+                    <p class="item-cover__text">Frente</p>
+                </div>
+                <div class="item-cover">
+                    <img class="item-cover__img" src="../img/multimedia/naruto-shippuden/kakashi_hatake_back.png" alt="Figura Funko coleccionable de Kakashi Hatake en caja">
+                    <p class="item-cover__text">Dorso</p>
+                </div>
+            </div>
+
+            <div class="container--create admin__box">
+                <input class="admin__btn" type="submit" value="Modificar Producto">
             </div>
         </form>
-
     </main>
 
     <footer class="footer"> <!-- inicio del footer -->
