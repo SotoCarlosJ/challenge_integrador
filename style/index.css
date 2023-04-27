@@ -586,7 +586,7 @@ img {
     border: none;
     border-bottom: 2px solid var(--red-solid);
     outline: none;
-    padding: var(--spacing-8);
+    padding: 0.4rem;
     font-size: var(--font-small);
 }
 .admin__input:-webkit-autofill,
@@ -684,10 +684,13 @@ img {
 }
 .filter__input--admin {
     width: auto;
-    padding-right: var(--spacing-128);
+    padding-right: var(--spacing-68);
 }
 .admin__input--width-30 {
     width: 30rem;
+}
+.admin__input--width-15 {
+    width: 15rem;
 }
 .admin__input--width-5 {
     width: 5rem;
@@ -698,4 +701,18 @@ img {
 }
 .admin__box--gap {
     gap: var(--spacing-8);
+}
+
+/* EDIT */
+.item-cover {
+    display: grid;
+    place-items: center;
+}
+.item-cover__img {
+    border-bottom: 1px solid var(--red-solid);
+}
+.item-cover__text {
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    font-size: var(--font-medium);
 }
