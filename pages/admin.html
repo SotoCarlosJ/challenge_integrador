@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Funkoshop</title>
+    <link rel="stylesheet" href="../style/index.css">
 </head>
 <body>
-    <header> <!-- inicio del header -->
-        <nav>
-            <picture> <!-- logo de la tienda con enlace a home -->
+    <header class="header"> <!-- inicio del header -->
+        <nav class="navbar container">
+            <picture class="navbar__logo"> <!-- logo de la tienda con enlace a home -->
                 <a href="../index.html">
                     <img src="../img/multimedia/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>
             </picture> <!-- logo de la tienda con enlace a home -->
 
-            <ul> <!-- barra de navegacion -->
-                <li>
-                    <a href="../index.html">SALIR</a>
+            <ul class="navbar__menu"> <!-- barra de navegacion -->
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../index.html">SALIR</a>
                 </li>
             </ul> <!-- barra de navegacion -->
         </nav>
@@ -288,23 +289,23 @@
         </section>
     </main>
 
-    <footer> <!-- inicio del footer -->
-        <nav> 
-            <ul> <!-- barra de navagacion -->
-                <li>
-                    <a href="./shop.html">SHOP</a>
+    <footer class="footer"> <!-- inicio del footer -->
+        <nav class="navbar container"> 
+            <ul class="navabr__items"> <!-- barra de navagacion -->
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./shop.html">SHOP</a>
                 </li>
 
-                <li>
-                    <a href="./register.html">REGISTRARSE</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./register.html">REGISTRARSE</a>
                 </li>
 
-                <li>
-                    <a href="./login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./login.html">LOGIN</a>
                 </li>
 
-                <li>
-                    <a href="./contacto.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./contacto.html">CONTACTO</a>
                 </li>
             </ul> <!-- barra de navagacion -->
 
@@ -315,7 +316,7 @@
             </picture> <!-- logo de la tienda -->
         </nav> 
 
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- fin del footer -->
 </body>
 </html>
