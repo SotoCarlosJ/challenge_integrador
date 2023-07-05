@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item | Funkoshop</title>
     <link rel="stylesheet" href="../style/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
 <body>
     <header class="header"> <!-- inicio del header -->
@@ -70,7 +68,7 @@
 
                 <form class="add-to-cart" action=""> <!-- formulario para agregar cantidad de productos al carrito -->
                     <input type="button" class="add-to-cart__btn" id="btn_remove" value="-">
-                    <input class="add-to-cart__input" type="number" id="item_qty" value="0">
+                    <input class="add-to-cart__input" type="number" id="item_qty" placeholder="0">
                     <input type="button" class="add-to-cart__btn" id="btn_add" value="+">
 
                     <input class="add-to-cart__submit" type="submit" value="Agregar al Carrito">
@@ -195,23 +193,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script src="../item.js"></script>
-    <script>
-        new Glide('.glide', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 3,
-            gap: 30,
-            breakpoints: {
-                991: {
-                    perView: 2
-                },
-                768: {
-                    perView: 1
-                }
-            }
-        }
-        ).mount();
-        </script>
+    <script src="../js/glide.js"></script>
 </body>
 </html>
