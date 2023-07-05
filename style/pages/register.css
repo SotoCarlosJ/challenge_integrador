@@ -1,0 +1,10 @@
+/* REGISTER - MAIN */
+.admin__text {
+    text-align: center;
+    font-family: var(--alternative-font);
+    font-weight: 500;
+    font-size: var(--font-xlarge);
+}
+.admin__terms {
+    color: var(--blue-solid);
+}
