@@ -1,0 +1,71 @@
+/* LOGIN - MAIN */
+.admin {
+    padding: var(--spacing-36);
+}
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    gap: var(--spacing-36);
+}
+.admin__tittle {
+    font-family: var(--alternative-font);
+    font-weight: 700;
+    font-size: var(--font-display);
+}
+.admin__tittle--user {
+    text-align: center;
+}
+.form-container {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.admin__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+}
+.admin__box {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+.admin__label {
+    font-weight: 400;
+    font-size: var(--font-large);
+}
+.admin__input {
+    border: none;
+    border-bottom: 2px solid var(--red-solid);
+    outline: none;
+    padding: 0.4rem;
+    font-size: var(--font-small);
+}
+.admin__input:-webkit-autofill,
+.admin__input:-webkit-autofill:hover, 
+.admin__input:-webkit-autofill:focus, 
+.admin__input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.admin__input::placeholder {
+    font-weight: 400;
+    font-size: var(--font-xsmall);
+    color: var(--dark-bg-300);
+}
+.admin__input--password::placeholder {
+    font-size: var(--font-medium);
+}
+.admin__box--submit {
+    justify-content:space-evenly;
+}
+
+.checkbox--admin {
+    padding: 0;
+}
+.admin__link {
+    color: var(--blue-solid);
+    font-weight: 400;
+    font-size: var(--font-small);
+    text-align: center;
+}
