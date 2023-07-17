@@ -11,9 +11,9 @@ router.put('/edit/:id', adminControllers.edit);
 router.delete('/delete/:id', adminControllers.delete);
 
 /* Auth Routes */
-router.get('/login', authControllers.login);
-router.post('/login', authControllers.login);
-router.get('/register', authControllers.register);
-router.post('/register', authControllers.register);
+router.get('/login', adminControllers.login);
+router.post('/login', adminControllers.login);
+router.get('/register', adminControllers.register);
+router.post('/register', adminControllers.register);
 
 module.exports = router;
