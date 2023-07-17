@@ -1,10 +1,10 @@
 const path = require('path');
 
 const mainControllers = {
-    home: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/index.html')),
-    contact: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/shop/contacto.html')),
-    about: (req, res) => res.send('About view route'),
-    faqs: (req, res) => res.send('Faqs view route')
+    homeView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/index.html')),
+    contactView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/shop/contacto.html')),
+    aboutView: (req, res) => res.send('About view route'),
+    faqsView: (req, res) => res.send('Faqs view route')
 }
 
 module.exports = mainControllers;
