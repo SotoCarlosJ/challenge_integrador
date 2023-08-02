@@ -1,10 +1,22 @@
 const path = require('path');
+const { getAllProducts, getOneProduct } = require('../services/itemServices');
 
 const shopControllers = {
-    shopView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/shop/shop.html')),
-    itemView: (req, res) => {
+    shopView: async (req, res) => {
+        const results = await getAllProducts();
+        res.send({
+            view: 'Shop | Funkoshop',
+            results
+        })
+        // res.sendFile(path.resolve(__dirname, '../../public/pages/shop/shop.html'));
+    },
+    itemView: async (req, res) => {
         const id = req.params.id;
-        res.send(`View for item with ID: ${id}`);
+        const result = await getOneProduct(id);
+        res.send({
+            view: 'Shop | Funkoshop',
+            result
+        });
     },
     addItemView: (req, res) => {
         const id = req.params.id;

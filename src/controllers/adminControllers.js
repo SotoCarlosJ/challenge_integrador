@@ -1,9 +1,14 @@
+const { createProduct, deleteProduct } = require('../services/itemServices');
 const path = require('path');
 
 const adminControllers = {
     adminView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/admin/admin.html')),
     createView: (req, res) => res.send('Create View Route'),
-    createItem: (req, res) => res.send('Create Route for new item'),
+    createItem: async (req, res) => {
+        const item = req.body;
+        const result = await createProduct(Object.values(item));
+        res.send(result);
+    },
     editView: (req, res) => {
         const id = req.params.id;
         res.send(`Edit View for item with ID: ${id}`);
@@ -12,9 +17,13 @@ const adminControllers = {
         const id = req.params.id;
         res.send(`Edit Route for item with ID: ${id}, with new data`);
     },
-    deleteItem: (req, res) => {
+    deleteItem: async (req, res) => {
         const id = req.params.id;
-        res.send(`Delete Route for item with ID: ${id}`);
+        const result = await deleteProduct(id);
+        res.send({
+            view: 'FUNKO | ITEM DELETED',
+            result
+        });
     },
     loginView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/admin/login.html')),
     loginUser: (req, res) => res.send('Login Route for User'),
