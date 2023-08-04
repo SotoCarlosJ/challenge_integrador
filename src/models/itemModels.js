@@ -36,7 +36,7 @@ const create = async (params) => {
 
 const edit = async (params, id) => {
     try {
-        const [rows] = await conn.query('UPDATE product SET ? WHERE ?;' [params, id]);
+        const [rows] = await conn.query('UPDATE product SET ? WHERE ?', [params, id]);
         return rows;
     } catch (error) {
         console.error(error);

@@ -1,4 +1,4 @@
-const { createProduct, deleteProduct } = require('../services/itemServices');
+const { createProduct, editProduct, deleteProduct } = require('../services/itemServices');
 const path = require('path');
 
 const adminControllers = {
@@ -13,9 +13,11 @@ const adminControllers = {
         const id = req.params.id;
         res.send(`Edit View for item with ID: ${id}`);
     },
-    editItem: (req, res) => {
+    editItem: async (req, res) => {
         const id = req.params.id;
-        res.send(`Edit Route for item with ID: ${id}, with new data`);
+        const item = req.body;
+        const result = await editProduct(item, id);
+        res.send(result);
     },
     deleteItem: async (req, res) => {
         const id = req.params.id;
