@@ -1,4 +1,3 @@
-const path = require('path');
 const { getAllProducts, getOneProduct } = require('../services/itemServices');
 
 const shopControllers = {
@@ -7,8 +6,7 @@ const shopControllers = {
         res.send({
             view: 'Shop | Funkoshop',
             results
-        })
-        // res.sendFile(path.resolve(__dirname, '../../public/pages/shop/shop.html'));
+        });
     },
     itemView: async (req, res) => {
         const id = req.params.id;

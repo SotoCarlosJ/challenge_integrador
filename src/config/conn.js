@@ -24,4 +24,4 @@ pool.getConnection((error, connection) => {
 
 module.exports = {
     conn: pool.promise()
-}
+};

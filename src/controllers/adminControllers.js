@@ -1,17 +1,27 @@
-const { createProduct, editProduct, deleteProduct } = require('../services/itemServices');
+const { getAllProducts, createProduct, editProduct, deleteProduct } = require('../services/itemServices');
 const path = require('path');
 
 const adminControllers = {
-    adminView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/admin/admin.html')),
+    adminView: async (req, res) => {
+        const result = await getAllProducts();
+        res.send({
+            view: 'Admin | Funkoshop',
+            result
+        });
+    },
     createView: (req, res) => res.send('Create View Route'),
     createItem: async (req, res) => {
         const item = req.body;
         const result = await createProduct(Object.values(item));
         res.send(result);
     },
-    editView: (req, res) => {
+    editView: async (req, res) => {
         const id = req.params.id;
-        res.send(`Edit View for item with ID: ${id}`);
+        const result = await getOneProduct(id);
+        res.send({
+            view: 'Edit | Funkoshop',
+            result
+        });
     },
     editItem: async (req, res) => {
         const id = req.params.id;
@@ -22,10 +32,7 @@ const adminControllers = {
     deleteItem: async (req, res) => {
         const id = req.params.id;
         const result = await deleteProduct(id);
-        res.send({
-            view: 'FUNKO | ITEM DELETED',
-            result
-        });
+        res.send(result);
     },
     loginView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/admin/login.html')),
     loginUser: (req, res) => res.send('Login Route for User'),
