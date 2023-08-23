@@ -7,4 +7,5 @@
 .results__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-36) var(--spacing-24);
 }

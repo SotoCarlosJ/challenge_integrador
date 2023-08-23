@@ -1,0 +1,104 @@
+<%- include('../partials/header') %>
+
+<main class="main-container"> <!-- inicio del main -->
+    <div class="container main-container--shop">
+        <aside class="filter"> <!-- formulario para buscar y/o filtrar producto -->
+            <div class="filter__search"> <!-- Input Buscar -->
+                <label class="filter__tittle" for="buscar">BUSCAR</label>
+                <input class="filter__input" type="text" name="buscar" id="buscar" placeholder="item o categoria">
+            </div> <!-- Input Buscar -->
+    
+            <div class="filter__sort-by"> <!-- Input Ordenar -->
+                <label class="filter__tittle" for="ordenar">ORDENAR POR</label>
+                <select class="filter__input" name="ordenar" id="ordenar">
+                    <option value="" disabled selected hidden>Mayor a menor</option>
+                    <option value="mayor">Mayor a menor</option>
+                    <option value="menor">Menor a mayor</option>
+                    <option value="relevantes">Más relevantes</option>
+                </select>
+            </div> <!-- Input Ordenar -->
+    
+            <div class="filter__price"> <!-- Input Precio -->
+                <p class="filter__tittle">PRECIO</p>
+    
+                <div class="range">
+                    <label class="range__tittle" for="minimo">MIN</label>
+                    <input class="range__input input-number" type="number" name="minimo" id="precio-min" placeholder="0">
+    
+                    <p>-</p>
+    
+                    <label class="range__tittle" for="maximo">MAX</label>
+                    <input class="range__input input-number" type="number" name="maximo" id="precio-max" placeholder="0">
+                </div>
+            </div> <!-- Input Precio -->
+    
+            <div class="filter__condition"> <!-- Input Filtrar -->
+                <p class="filter__tittle">FILTRAR</p>
+                
+                <label class="checkbox" for="filtro-1"> <!-- Checkbox personalizado "NUEVO" -->
+                    <input class="checkbox__input" type="checkbox" id="filtro-1" name="filtro-1" value="nuevos">
+                    <span class="checkbox__span"></span>
+                    <p class="checkbox__text">NUEVO</p>
+                </label>
+    
+                <label class="checkbox" for="filtro-2"> <!-- Checkbox personalizado "OFERTAS" -->
+                    <input class="checkbox__input" type="checkbox" id="filtro-2" name="filtro-2" value="ofertas">
+                    <span class="checkbox__span"></span>
+                    <p class="checkbox__text">OFERTAS</p>
+                </label>
+                
+                <label class="checkbox" for="filtro-3"> <!-- Checkbox personalizado "EDICION ESPECIAL" -->
+                    <input class="checkbox__input" type="checkbox" id="filtro-3" name="filtro-3" value="edicion-especial">
+                    <span class="checkbox__span"></span>
+                    <p class="checkbox__text">EDICIÓN ESPECIAL</p>
+                </label>
+    
+                <label class="checkbox" for="filtro-4"> <!-- Checkbox personalizado "FAVORITOS" -->
+                    <input class="checkbox__input" type="checkbox" id="filtro-4" name="filtro-4" value="favoritos">
+                    <span class="checkbox__span"></span>
+                    <p class="checkbox__text">FAVORITOS</p>
+                </label>
+            </div> <!-- Input Filtrar -->
+        </aside> <!-- formulario para buscar y/o filtrar producto -->
+
+        <section class="results"> <!-- productos filtrados -->
+            <ul class="results__items">
+                <% items.forEach(item => {%>
+                    <li class="results__item"> <!-- productos #1 filtrado -->
+                        <article class="card-item">
+                            <a class="card-item__link" href="./item.html">
+                                <picture class="card-item__cover"> <!-- imagen del producto -->
+                                    <span class="card-item__tag">NUEVO</span>
+                                    <img class="card-item__img--front" src="../../img/multimedia<%= item.image_front %>" alt="<%= item.product_description %>">
+                                    <img class="card-item__img--back" src="../../img/multimedia<%= item.image_back %>" alt="<%= item.product_description %>">
+                                </picture> <!-- imagen del producto -->
+                
+                                <div class="card-item__content"> <!-- descripcion del producto -->
+                                    <p class="card-item__licence"><%= item.licence_id %></p>
+                
+                                    <h4 class="card-item__name"><%= item.product_name %></h4>
+                
+                                    <p class="card-item__price">$ <%= item.price %></p>
+                
+                                    <p class="card-item__promo"><%= item.dues %> CUOTAS SIN INTERÉS</p>
+                                </div> <!-- descripcion del producto -->
+                            </a>
+                        </article> 
+                    </li> <!-- productos #1 filtrado -->
+                <% })%>
+            </ul>
+        </section> <!-- productos filtrados -->
+
+        <section class="pagination"> <!-- paginacion -->
+            <p class="pagination__btn pagination__btn--back">&lsaquo;</p>
+            <p class="pagination__btn">1</p>
+            <p class="pagination__btn">2</p>
+            <p class="pagination__btn">...</p>
+            <p class="pagination__btn">9</p>
+            <p class="pagination__btn">10</p>
+            <p class="pagination__btn pagination__btn--next">&rsaquo;</p>
+        </section> <!-- paginacion -->
+    </div>
+</main> <!-- fin del main -->
+
+<%- include('../partials/footer') %>

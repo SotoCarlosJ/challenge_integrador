@@ -1,5 +1,6 @@
 const express = require('express');
 const methodOverride = require('method-override');
+const path = require('path');
 const app = express();
 const PORT = 4000;
 
@@ -10,6 +11,10 @@ const admimnRoutes = require('./src/routes/adminRoutes');
 
 /* Carpeta con archivos estaticos */
 app.use(express.static('public'));
+
+/** Configuracion del Template Engine - EJS */
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, './src/views'));
 
 /* Habilitando los metodos PUT y DELETE */
 app.use(methodOverride('_method'));

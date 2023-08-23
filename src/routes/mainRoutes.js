@@ -4,6 +4,7 @@ const router = express.Router();
 
 /* mainRoutes */
 router.get('/home', mainControllers.homeView);
+// router.get('/home', mainControllers.homeView);
 router.get('/contact', mainControllers.contactView);
 router.get('/about', mainControllers.aboutView);
 router.get('/faqs', mainControllers.faqsView);

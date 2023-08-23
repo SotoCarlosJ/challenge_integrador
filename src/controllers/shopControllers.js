@@ -3,17 +3,23 @@ const { getAllProducts, getOneProduct } = require('../services/itemServices');
 const shopControllers = {
     shopView: async (req, res) => {
         const results = await getAllProducts();
-        res.send({
-            view: 'Shop | Funkoshop',
-            results
+        const { data } = results
+        res.render('./shop/shop', {
+            view: {
+                title: 'Shop | Funkoshop'
+            },
+            items: data
         });
     },
     itemView: async (req, res) => {
         const id = req.params.id;
         const result = await getOneProduct(id);
-        res.send({
-            view: 'Shop | Funkoshop',
-            result
+        const { data } = result;
+        res.render('./shop/item', {
+            view: {
+                title: 'Shop | Funkoshop'
+            },
+            item: data[0]
         });
     },
     addItemView: (req, res) => {

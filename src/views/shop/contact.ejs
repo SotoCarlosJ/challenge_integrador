@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+
+    <main class="admin admin-container"> <!-- inicio del main -->
+        <h1 class="admin__tittle admin__tittle--user">Contactanos</h1>
+
+        <form class="container admin__form" action="">
+            <p class="required">"*" Campos obligatorios</p>
+
+            <div class="admin__box">
+                <label class="admin__label" for="email">Email:</label>
+                <input class="admin__input admin__input--contact" type="email" name="email" id="email" required>
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="name">Nombre:</label>
+                <input class="admin__input admin__input--contact" type="text" name="name" id="name" required>
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="last-name">Apellido:</label>
+                <input class="admin__input admin__input--contact" type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="phone">Telefono:</label>
+                <input class="admin__input admin__input--contact" type="tel" name="phone" id="phone" required>
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="question">Tipo de Consulta:</label>
+                <select class="admin__select" name="question" id="question" required>
+                    <option value="" selected hidden disabled>Seleccione su tipo de consulta</option>
+                    <option value="buy">Comprar</option>
+                    <option value="payments">Medios de pagos</option>
+                    <option value="shipping">Envios</option>
+                    <option value="returns">Devoluciones</option>
+                    <option value="others">Otros</option>
+                </select>
+            </div>
+
+            <div class="admin__box--text-area">
+                <label class="admin__label" for="message">Escribenos tu consulta:</label>
+                <textarea class="text-area" name="message" id="message" cols="30" rows="10" placeholder="Escribenos tu consulta aca"></textarea>
+            </div>
+
+            <div class="admin__box admin__box--start">
+                <input class="admin__btn" type="submit" name="send" id="send" value="Enviar">
+                <input class="admin__btn" type="reset" name="clear" id="clear" value="Limpiar">
+            </div>
+
+
+        </form>
+    </main> <!-- fin del main -->
+
+<%- include('../partials/footer') %>

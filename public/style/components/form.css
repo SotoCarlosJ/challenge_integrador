@@ -75,7 +75,7 @@
     content: '';
     width: 100%;
     height: 100%;
-    background-image: url(../img/multimedia/check-small-rounded.svg);
+    background-image: url(/img/multimedia/check-small-rounded.svg);
     background-size: cover;
     position: absolute;
     transform: scale(0);
