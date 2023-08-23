@@ -1,12 +1,15 @@
-const { getAllProducts, createProduct, editProduct, deleteProduct } = require('../services/itemServices');
+const { getOneProduct, getAllProducts, createProduct, editProduct, deleteProduct } = require('../services/itemServices');
 const path = require('path');
 
 const adminControllers = {
     adminView: async (req, res) => {
         const result = await getAllProducts();
-        res.send({
-            view: 'Admin | Funkoshop',
-            result
+        const { data } = result;
+        res.render('./admin/admin', {
+            view: {
+                title: 'Admin | Funkoshop'
+            },
+            items: data
         });
     },
     createView: (req, res) => res.send('Create View Route'),
@@ -18,9 +21,13 @@ const adminControllers = {
     editView: async (req, res) => {
         const id = req.params.id;
         const result = await getOneProduct(id);
-        res.send({
-            view: 'Edit | Funkoshop',
-            result
+        const { data } = result;
+        console.log(data[0]);
+        res.render('./admin/edit', {
+            view: {
+                title: 'Edit | Funkoshop'
+            },
+            item: data[0]
         });
     },
     editItem: async (req, res) => {
