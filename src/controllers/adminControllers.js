@@ -12,7 +12,13 @@ const adminControllers = {
             items: data
         });
     },
-    createView: (req, res) => res.send('Create View Route'),
+    createView: (req, res) => {
+        res.render('admin/create', {
+            view: {
+                title: 'Create | Funkoshop'
+            }
+        })
+    },
     createItem: async (req, res) => {
         const item = req.body;
         const result = await createProduct(Object.values(item));
