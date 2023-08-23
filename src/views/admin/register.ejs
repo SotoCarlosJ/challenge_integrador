@@ -1,0 +1,46 @@
+<%- include('../partials/header') %>
+
+    <main class="admin-container admin">
+        <h1 class="admin__tittle admin__tittle--user">CREA TU CUENTA</h1>
+
+        <p class="admin__text">Completa el formulario para ser parte del mundo de los Funkos</p>
+
+        <form class="form-container admin__form" action="">
+            <div class="admin__box">
+                <label class="admin__label" for="name">Nombre:</label>
+                <input class="admin__input" type="text" name="name" id="name" placeholder="John" required>
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="last-name">Apellido:</label>
+                <input class="admin__input" type="text" name="last-name" id="last-name" placeholder="Doe" required>
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="email">Email:</label>
+                <input class="admin__input" type="email" name="email" id="email" placeholder="johndoe@correo.com" required>
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="password">Contraseña:</label>
+                <input class="admin__input admin__input--password" type="password" name="password" id="password" placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;" required>  
+            </div>
+
+            <div class="admin__box">
+                <label class="admin__label" for="re-password">Repita Contraseña:</label>
+                <input class="admin__input admin__input--password" type="password" name="re-password" id="re-password" placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;" required>  
+            </div>
+
+            <div class="admin__box admin__box--submit">
+                <input class="admin__btn" type="submit" value="Registrar">
+
+                <label class="checkbox checkbox--admin" for="accept"> <!-- Checkbox personalizado "NUEVO" -->
+                    <input class="checkbox__input" type="checkbox" id="accept" name="accept" value="accept">
+                    <span class="checkbox__span"></span>
+                    <p class="checkbox__text">Acepto <a class="admin__terms" href="#">Términos y Condiciones</a></p>
+                </label>
+            </div>
+        </form>
+    </main>
+
+    <%- include('../partials/footer') %>
