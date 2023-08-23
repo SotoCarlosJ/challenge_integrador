@@ -34,9 +34,21 @@ const adminControllers = {
         const result = await deleteProduct(id);
         res.send(result);
     },
-    loginView: (req, res) => res.sendFile(path.resolve(__dirname, '../../public/pages/admin/login.html')),
+    loginView: (req, res) => {
+        res.render('./admin/login', {
+            view: {
+                title: 'Login | Funkoshop'
+            }
+        })
+    },
     loginUser: (req, res) => res.send('Login Route for User'),
-    registerView: (req, res) => res.send('Register View'),
+    registerView: (req, res) => {
+        res.render('./admin/register', {
+            view: {
+                title: 'Register | Funkoshop'
+            }
+        })
+    },
     registerUser: (req, res) => res.send('Register Route for new user')
 };
 
