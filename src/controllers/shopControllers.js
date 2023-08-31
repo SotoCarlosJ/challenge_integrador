@@ -3,7 +3,7 @@ const { getAllProducts, getOneProduct } = require('../services/itemServices');
 const shopControllers = {
     shopView: async (req, res) => {
         const results = await getAllProducts();
-        const { data } = results
+        const { data } = results;
         res.render('./shop/shop', {
             view: {
                 title: 'Shop | Funkoshop'

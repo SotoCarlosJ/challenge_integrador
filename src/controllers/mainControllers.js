@@ -1,13 +1,15 @@
-const path = require('path');
+const { getAllLicences } = require('../services/licenceServices');
 
 const mainControllers = {
-    homeView: (req, res) => {
+    homeView: async (req, res) => {
+        const results = await getAllLicences();
+        const { data } = results;
         res.render('home', {
             view: {
                 title: 'Home | Funkoshop'
-            }
+            },
+            licences: data
         });
-        // res.sendFile(path.resolve(__dirname, '../../public/index.html')),
     },
     contactView: (req, res) => {
         res.render('./shop/contact', {
